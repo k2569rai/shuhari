@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHUHARI Berlin Festival 2026</title>
+    <title>守破離 SHU HA RI 2026</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="images/124662.jpg" type="image/jpeg">
@@ -18,7 +18,7 @@
         <nav class="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-widest">
             <a href="#hero" class="nav-label" data-key="nav.hero">Home</a>
             <a href="#vision" class="nav-label" data-key="nav.vision">Vision</a>
-            <a href="#concept" class="nav-label" data-key="nav.concept">Konzept</a>
+            <a href="#concept" class="nav-label" data-key="nav.concept">Concept</a>
             <a href="#artists" class="nav-label" data-key="nav.artists">Artists</a>
             <a href="#schedule" class="nav-label" data-key="nav.schedule">Schedule</a>
             <a href="#access" class="nav-label" data-key="nav.access">Access</a>
@@ -55,7 +55,7 @@
     <main>
         <section id="hero" class="min-h-screen flex flex-col justify-center px-6 relative text-white text-center">
             <div class="max-w-[1400px] mx-auto flex flex-col items-center">
-                <h1 class="text-6xl md:text-[10rem] font-black tracking-tighter italic leading-none mb-4">SHUHARI</h1>
+                <h1 class="text-6xl md:text-[9rem] font-black tracking-tighter italic leading-none mb-4">SHU HA RI</h1>
                 
                 <div class="space-y-2 mb-12 text-sm md:text-base font-bold tracking-widest">
                     <p id="h-date"></p>
@@ -70,19 +70,22 @@
         </section>
 
         <section id="vision" class="grid-line-b bg-white relative z-10">
-            <div class="max-w-[1400px] mx-auto p-8 md:p-24 text-center">
-                <p class="text-[#3F51B5] font-bold tracking-[0.4em] mb-6 text-xs uppercase">Vision</p>
-                <h2 id="v-main" class="text-3xl md:text-6xl font-black leading-tight mb-10 tracking-tighter"></h2>
-                <p id="v-sub" class="text-lg md:text-xl font-black italic max-w-3xl mx-auto"></p>
+            <div class="max-w-[1000px] mx-auto py-20 px-8">
+                <p class="text-[#3F51B5] font-bold tracking-[0.4em] mb-10 text-xs uppercase text-center">Vision</p>
+                
+                <h2 id="v-main" class="responsive-title text-black font-black italic tracking-tighter leading-[1.1] text-center mb-16"></h2>
+                
+                <div id="v-sub" class="max-w-[800px] mx-auto text-lg leading-relaxed text-black font-medium whitespace-pre-wrap"></div>
             </div>
         </section>
 
         <section id="concept" class="grid-line-b bg-white relative z-10">
-            <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12">
-                <div class="md:col-span-4 p-8 md:p-20 bg-gray-50 md:grid-line-r">
-                    <h2 id="c-title" class="text-3xl font-black italic"></h2>
-                </div>
-                <div id="c-body" class="md:col-span-8 p-8 md:p-20 text-lg leading-relaxed space-y-6"></div>
+            <div class="max-w-[1000px] mx-auto py-20 px-8">
+                <p class="text-[#D32F2F] font-bold tracking-[0.4em] mb-10 text-xs uppercase text-center">Concept</p>
+                
+                <h2 id="c-title" class="responsive-title text-black font-black italic tracking-tighter leading-[1.1] text-center mb-16"></h2>
+                
+                <div id="c-body" class="max-w-[800px] mx-auto text-lg leading-relaxed text-black font-medium"></div>
             </div>
         </section>
 
@@ -98,6 +101,21 @@
             <div id="access" class="p-8 md:p-20 grid-line-b">
                 <h2 class="text-[#4CAF50] font-bold tracking-[0.4em] mb-10 text-xs">ACCESS</h2>
                 <div id="access-info" class="space-y-4"></div>
+            </div>
+        </section>
+
+        <section id="partners" class="bg-white relative z-10 border-t border-black">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="p-8 md:p-20 md:border-r border-black border-b md:border-b-0">
+                    <h2 class="text-[#3F51B5] font-bold tracking-[0.4em] mb-12 text-xs uppercase">Sponsors</h2>
+                    <div id="sponsor-list" class="grid grid-cols-2 gap-8 items-center">
+                        </div>
+                </div>
+                <div class="p-8 md:p-20">
+                    <h2 class="text-[#4CAF50] font-bold tracking-[0.4em] mb-12 text-xs uppercase">Support</h2>
+                    <div id="support-list" class="grid grid-cols-2 gap-8 items-center">
+                        </div>
+                </div>
             </div>
         </section>
     </main>

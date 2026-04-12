@@ -44,5 +44,13 @@ const translationsDe = {
         instagram: "https://www.instagram.com/shuhari_berlin/",
         facebook: "https://www.facebook.com/share/1bGK4AHXQm/?mibextid=wwXIfr"
     },
-    access: { venue: "JDZB Berlin", address: "Saargemünder Str. 2, 14195 Berlin", note: "Eintritt frei (Anmeldung erforderlich)" }
+    access: { venue: "JDZB Berlin", address: "Saargemünder Str. 2, 14195 Berlin", note: "Eintritt frei (Anmeldung erforderlich)" },
+    sponsors: [
+        { name: "Tobitate! Study Abroad Japan", img: "images/logo_tobitate.png", url: "https://..." },
+        { name: "Japanisch-Deutsches Zentrum Berlin", img: "images/logo_jdzb.png", url: "https://..." }
+    ],
+    support: [
+        { name: "Organization A", img: "./images/support_a.png", url: "https://..." },
+        { name: "Organization B", img: "./images/support_b.png", url: "https://..." }
+    ]
 };

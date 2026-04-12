@@ -43,5 +43,13 @@ const translationsJa = {
         facebook: "https://www.facebook.com/share/1bGK4AHXQm/?mibextid=wwXIfr"
     },
     schedule: { events: [{ time: "upcoming", name: "upcoming" }] },
-    access: { venue: "日独センター　ベルリン", address: "Saargemünder Str. 2, 14195 Berlin", note: "Admission Free" }
+    access: { venue: "日独センター　ベルリン", address: "Saargemünder Str. 2, 14195 Berlin", note: "Admission Free" },
+    sponsors: [
+        { name: "Tobitate! Study Abroad Japan", img: "images/logo_tobitate.png", url: "https://..." },
+        { name: "Japanisch-Deutsches Zentrum Berlin", img: "images/logo_jdzb.png", url: "https://..." }
+    ],
+    support: [
+        { name: "Organization A", img: "./images/support_a.png", url: "https://..." },
+        { name: "Organization B", img: "./images/support_b.png", url: "https://..." }
+    ]
 };

@@ -19,17 +19,26 @@ function setLang(lang) {
     
     document.getElementById('h-img').src = t.hero.img;
 
-    // 2. VISION セクションの更新
+    // 見出しを同じクラス（responsive-title）の場所へ
     document.getElementById('v-main').innerHTML = t.vision.main;
-    document.getElementById('v-sub').innerText = t.vision.sub;
+    document.getElementById('c-title').innerHTML = t.concept.title; // innerHTMLに変更
 
-    // 3. CONCEPT セクションの更新
-    document.getElementById('c-title').innerText = t.concept.title;
+    // 本文
+    document.getElementById('v-sub').innerText = t.vision.sub;
     document.getElementById('c-body').innerHTML = t.concept.body;
 
     // 4. 動的リストの描画
     renderArtists(t.artists.list);
     renderSchedule(t.schedule.events);
+
+    // 6. アクセス情報（★ここが消えていました★）
+    const accessInfo = document.getElementById('access-info');
+    if (accessInfo) {
+        accessInfo.innerHTML = `
+            <p class="text-3xl font-black">${t.access.venue}</p>
+            <p class="text-sm opacity-50">${t.access.address}</p>
+        `;
+    }
 
     // SNSリンクの描画（ヘッダーとフッター両方）
     const socialHtml = `
@@ -46,6 +55,9 @@ function setLang(lang) {
     
     document.documentElement.lang = lang;
     localStorage.setItem('shuhari-lang', lang);
+    // スポンサーとサポートの描画を追加
+    renderPartners('sponsor-list', t.sponsors);
+    renderPartners('support-list', t.support);
 }
 
 // アーティスト一覧を描画する関数
@@ -54,20 +66,23 @@ function renderArtists(list) {
     if (!grid) return;
 
     grid.innerHTML = list.map(a => {
-        // ここでデータの "color" に合わせてホバー時のクラスを変える
+        // ホバー時の背景色の設定（維持）
         let hoverClass = 'hover:bg-black'; // デフォルト
         if (a.color === 'shu') hoverClass = 'hover:bg-[#3F51B5]'; // 守 (青)
         if (a.color === 'ha')  hoverClass = 'hover:bg-[#D32F2F]'; // 破 (赤)
         if (a.color === 'ri')  hoverClass = 'hover:bg-[#4CAF50]'; // 離 (緑)
 
         return `
-            <div class="artist-card p-10 flex flex-col justify-end grid-line-r grid-line-b min-h-[400px] transition-all duration-500 ${hoverClass} hover:text-white group relative cursor-pointer bg-white">
-                <img src="${a.img}" class="absolute inset-0 p-16 object-contain opacity-10 group-hover:opacity-50 transition-all duration-500 pointer-events-none">
+            <div class="artist-card flex flex-col grid-line-r grid-line-b min-h-[450px] transition-all duration-500 ${hoverClass} hover:text-white group relative cursor-pointer bg-white overflow-hidden">
                 
-                <div class="relative z-10">
-                    <span class="text-[10px] font-bold uppercase tracking-widest">${a.id} / ${a.cat}</span>
-                    <h3 class="text-3xl font-black leading-none">${a.name}</h3>
-                    <p class="text-xs mt-3 opacity-60">${a.desc}</p>
+                <div class="artist-img-container flex-grow flex items-center justify-center p-8 bg-gray-50 group-hover:bg-transparent transition-colors duration-500">
+                    <img src="${a.img}" alt="${a.name}" class="artist-main-img object-contain max-h-[200px] transition-transform duration-500 group-hover:scale-105">
+                </div>
+
+                <div class="artist-text-container p-8 relative z-10">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-black mb-2 block group-hover:text-white">${a.id} / ${a.cat}</span>
+                    <h3 class="text-3xl font-black leading-none text-black group-hover:text-white">${a.name}</h3>
+                    <p class="text-xs mt-3 font-bold text-black opacity-70 group-hover:text-white group-hover:opacity-100">${a.desc}</p>
                 </div>
             </div>
         `;
@@ -94,3 +109,14 @@ function toggleMenu() {
 document.addEventListener('DOMContentLoaded', () => {
     setLang('en'); // 初期言語を英語に
 });
+
+function renderPartners(targetId, list) {
+    const container = document.getElementById(targetId);
+    if (!container) return;
+
+    container.innerHTML = list.map(p => `
+        <a href="${p.url}" target="_blank" class="block grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100">
+            <img src="${p.img}" alt="${p.name}" class="w-full h-auto max-h-12 object-contain mx-auto">
+        </a>
+    `).join('');
+}
