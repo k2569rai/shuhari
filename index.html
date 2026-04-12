@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUHARI Berlin Festival 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md grid-line-b flex justify-between items-center px-6 py-4 z-[100]">
+        <a href="#vision" class="font-black text-2xl tracking-tighter italic">SHUHARI</a>
+        <nav class="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-widest">
+            <a href="#vision" class="nav-label" data-key="nav.vision"></a>
+            <a href="#concept" class="nav-label" data-key="nav.concept"></a>
+            <a href="#artists" class="nav-label" data-key="nav.artists"></a>
+            <a href="#schedule" class="nav-label" data-key="nav.schedule"></a>
+            <a href="#food" class="nav-label" data-key="nav.food"></a>
+            <a href="#access" class="nav-label" data-key="nav.access"></a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <div class="hidden sm:flex gap-2 text-[10px] font-bold">
+                <button onclick="setLang('ja')">JP</button> / <button onclick="setLang('en')">EN</button>
+            </div>
+            <button onclick="toggleMenu()" class="lg:hidden p-2">≡</button>
+        </div>
+    </header>
+
+    <div class="vision-bg-container">
+        <img id="v-img" src="" class="vision-bg-image">
+        <div class="vision-mask"></div>
+    </div>
+
+    <div id="menu-overlay" onclick="toggleMenu()"></div>
+    <div id="mobile-menu" class="p-10 flex flex-col gap-8 shadow-2xl">
+        <button onclick="toggleMenu()" class="self-end text-2xl">✕</button>
+        <nav class="flex flex-col gap-6 text-sm font-bold uppercase tracking-widest">
+            <a href="#vision" onclick="toggleMenu()">Vision</a>
+            <a href="#concept" onclick="toggleMenu()">Konzept</a>
+            <a href="#artists" onclick="toggleMenu()">Artists</a>
+            <a href="#schedule" onclick="toggleMenu()">Schedule</a>
+            <a href="#food" onclick="toggleMenu()">Food</a>
+            <a href="#access" onclick="toggleMenu()">Access</a>
+        </nav>
+    </div>
+
+    <main>
+        <section id="vision" class="min-h-screen flex flex-col justify-center px-6 relative text-white">
+            <div class="max-w-5xl mx-auto text-center">
+                <p class="text-[#3F51B5] font-bold tracking-[0.4em] mb-4 text-xs">VISION</p>
+                <h1 id="v-main" class="text-5xl md:text-8xl font-black leading-tight mb-8 tracking-tighter"></h1>
+                <p id="v-sub" class="text-xl md:text-2xl font-light opacity-90 italic"></p>
+            </div>
+        </section>
+
+        <section id="concept" class="grid-line-b bg-white relative z-10">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12">
+                <div class="md:col-span-4 p-8 md:p-20 bg-gray-50 md:grid-line-r">
+                    <h2 id="c-title" class="text-3xl font-black"></h2>
+                    <div class="w-10 h-1 bg-[#D32F2F] mt-6"></div>
+                </div>
+                <div id="c-body" class="md:col-span-8 p-8 md:p-20 text-lg leading-relaxed space-y-6"></div>
+            </div>
+        </section>
+
+        <section id="artists" class="grid-line-b bg-white relative z-10">
+            <div class="max-w-[1400px] mx-auto">
+                <div id="artists-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"></div>
+            </div>
+        </section>
+
+        <section id="info" class="grid-line-b bg-white relative z-10">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2">
+                <div id="schedule" class="p-8 md:p-20 md:grid-line-r border-b md:border-b-0 border-black">
+                    <h2 class="text-[#3F51B5] font-bold tracking-[0.4em] mb-10 text-xs">SCHEDULE</h2>
+                    <div id="schedule-list"></div>
+                </div>
+                <div id="food" class="p-8 md:p-20">
+                    <h2 class="text-[#4CAF50] font-bold tracking-[0.4em] mb-10 text-xs">FOOD & DRINK</h2>
+                    <div id="food-content" class="space-y-6"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="access" class="bg-white relative z-10">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2">
+                <div class="p-8 md:p-20 md:grid-line-r border-b md:border-b-0 border-black">
+                    <h2 class="text-[#D32F2F] font-bold tracking-[0.4em] mb-10 text-xs uppercase">Location</h2>
+                    <div id="access-info" class="space-y-4"></div>
+                </div>
+                <div class="p-8 md:p-20">
+                    <h2 class="font-bold tracking-[0.4em] mb-10 text-xs uppercase text-gray-400">Organized by</h2>
+                    <div class="flex flex-wrap gap-8 grayscale opacity-50">
+                        <img src="./images/SHUHARI.png" class="h-8">
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-12 text-center bg-white relative z-10 border-t border-black">
+        <p class="text-[10px] font-bold tracking-widest opacity-30 uppercase">© SHUHARI Berlin 2025</p>
+    </footer>
+
+    <script src="./js/locales/ja.js"></script>
+    <script src="./js/locales/en.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
