@@ -1,5 +1,8 @@
 function setLang(lang) {
-    const t = lang === 'ja' ? translationsJa : translationsEn;
+    let t;
+    if (lang === 'ja') t = translationsJa;
+    else if (lang === 'de') t = translationsDe;
+    else t = translationsEn; // デフォルトは英語
     
     // 1. HERO セクションの更新
     document.getElementById('h-tagline').innerText = t.hero.tagline;
@@ -30,22 +33,33 @@ function setLang(lang) {
     renderSchedule(t.schedule.events);
     
     document.documentElement.lang = lang;
+    localStorage.setItem('shuhari-lang', lang);
 }
 
 // アーティスト一覧を描画する関数
 function renderArtists(list) {
     const grid = document.getElementById('artists-grid');
     if (!grid) return;
-    grid.innerHTML = list.map(a => `
-        <div class="artist-card p-10 flex flex-col justify-end grid-line-r grid-line-b min-h-[400px] transition-all duration-500 hover:bg-[#D32F2F] hover:text-white group relative cursor-pointer bg-white">
-            <img src="${a.img}" class="absolute inset-0 p-16 object-contain opacity-10 group-hover:opacity-50 transition-all duration-500 pointer-events-none">
-            <div class="relative z-10">
-                <span class="text-[10px] font-bold uppercase tracking-widest">${a.id} / ${a.cat}</span>
-                <h3 class="text-3xl font-black leading-none">${a.name}</h3>
-                <p class="text-xs mt-3 opacity-60">${a.desc}</p>
+
+    grid.innerHTML = list.map(a => {
+        // ここでデータの "color" に合わせてホバー時のクラスを変える
+        let hoverClass = 'hover:bg-black'; // デフォルト
+        if (a.color === 'shu') hoverClass = 'hover:bg-[#3F51B5]'; // 守 (青)
+        if (a.color === 'ha')  hoverClass = 'hover:bg-[#D32F2F]'; // 破 (赤)
+        if (a.color === 'ri')  hoverClass = 'hover:bg-[#4CAF50]'; // 離 (緑)
+
+        return `
+            <div class="artist-card p-10 flex flex-col justify-end grid-line-r grid-line-b min-h-[400px] transition-all duration-500 ${hoverClass} hover:text-white group relative cursor-pointer bg-white">
+                <img src="${a.img}" class="absolute inset-0 p-16 object-contain opacity-10 group-hover:opacity-50 transition-all duration-500 pointer-events-none">
+                
+                <div class="relative z-10">
+                    <span class="text-[10px] font-bold uppercase tracking-widest">${a.id} / ${a.cat}</span>
+                    <h3 class="text-3xl font-black leading-none">${a.name}</h3>
+                    <p class="text-xs mt-3 opacity-60">${a.desc}</p>
+                </div>
             </div>
-        </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 // スケジュール一覧を描画する関数 (これが足りませんでした)

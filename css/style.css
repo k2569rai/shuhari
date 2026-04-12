@@ -20,21 +20,6 @@ body { font-family: 'Noto Sans JP', sans-serif; background-color: #fdfdfd; color
 #menu-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 150; opacity: 0; pointer-events: none; transition: 0.3s; }
 #menu-overlay.open { opacity: 1; pointer-events: auto; }
 
-/* 守（SHU）: 青 */
-.hover-bg-shu:hover {
-    background-color: var(--shu-blue) !important;
-}
-
-/* 破（HA）: 赤 */
-.hover-bg-ha:hover {
-    background-color: var(--ha-red) !important;
-}
-
-/* 離（RI）: 緑 */
-.hover-bg-ri:hover {
-    background-color: var(--ri-green) !important;
-}
-
 /* テキストの視認性を上げるための調整 */
 .artist-card {
     background-color: white; /* 通常時は白 */

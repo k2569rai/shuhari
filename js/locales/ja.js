@@ -7,7 +7,7 @@ const translationsJa = {
         venue: "JDZB Japanisch-Deutsches Zentrum,<br>Saargemünder Str. 2, 14195 Berlin",
         btn: "Register Now",
         url: "https://rausgegangen.de/en/events/shu-ha-ri-2026-2/",
-        img: "./images/SHUHARI.png" // 背景画像
+        img: "./images/main-a.jpg" // 背景画像
     },
     vision: {
         main: "あなたの解釈が文化を動かす。<br>その手で時代を耕そう。",

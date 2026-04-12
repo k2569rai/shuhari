@@ -1,32 +1,31 @@
 const translationsEn = {
-    nav: { 
-        hero: "Home", 
-        vision: "Vision", 
-        concept: "Konzept", 
-        artists: "Artists", 
-        schedule: "Schedule", 
-        access: "Access" 
-    },
+    nav: { hero: "Home", vision: "Vision", concept: "Konzept", artists: "Artists", schedule: "Schedule", access: "Access" },
     hero: {
         tagline: "Forget Boundaries, Where Creation Converges.",
         date: "10:00–19:00 | 24.05.2025",
         entry: "Free Entry (Donation-based, Registration Required)",
-        venue: "JDZB Japanisch-Deutsches Zentrum, Saargemünder Str. 2, 14195 Berlin",
+        venue: "JDZB Japanisch-Deutsches Zentrum,<br>Saargemünder Str. 2, 14195 Berlin",
         btn: "Register Now",
         url: "https://rausgegangen.de/en/events/shu-ha-ri-2026-2/",
-        img: "./images/SHUHARI.png"
+        img: "./images/main-a.jpg"
     },
     vision: {
-        main: "Your interpretation moves culture.<br>Cultivate the era with your own hands.",
-        sub: "Opening the process of culture, creating a cycle where interpretations continue to be born."
+        main: "Your interpretation moves culture.<br>With your own hands, cultivate the times.",
+        sub: `SHU HA RI is not about preserving culture as knowledge or as something already completed.
+              It is a process of receiving, unsettling, and reinterpreting culture—
+              and transforming it into one’s own creation.
+              Through this event, we hope to create a space
+              where culture does not end as something merely to see or to learn,
+              but is handed forward—
+              toward the next expression, the next dialogue.`
     },
     concept: {
-        title: "Trace the SHUHARI.",
+        title: "Japanese culture is not something that becomes complete inside a showcase.",
         body: `
-            <p>SHUHARI is not about keeping culture as fixed knowledge or a finished product, but a process of receiving, shaking, reinterpreting, and connecting it to one's own creation.</p>
-            <p>Japanese culture does not complete within a showcase. It has lived on through people's lives, changing form over time. Discover the Japanese culture that completes within you.</p>
-            <p>We felt a challenge in the current situation where Japanese culture is often discussed as a completed image, and the thoughts residing in the details and the accumulated processes are not sufficiently shared.</p>
-            <p>By touching the process rather than just the finished product, we aim for new interpretations to arise within each visitor.</p>
+            <p>Within people’s everyday lives, it has continued to live, changing its form over time. Japanese culture completed within you. Follow the path of SHU HA RI.</p>
+            <p>Too often, specific forms of Japanese culture are presented as finished images. Yet the thinking embedded in their details and the long processes through which they have been accumulated are rarely shared.</p>
+            <p>When we were inside it, the shape of Japan was difficult to see. From a distance, its subtlety and its quiet spaces emerged.</p>
+            <p>This event offers a chance to experience the process of SHU HA RI: learning the form, breaking the shell, and transforming it into one’s own expression. Rather than focusing only on the finished work, we invite visitors to encounter the process itself— so that a new interpretation may arise within each person.</p>
         `
     },
     artists: {
@@ -34,7 +33,7 @@ const translationsEn = {
             { id: "01", cat: "Performance", name: "Coming Soon", desc: "Live Performance & Dance", img: "./images/small_performance.png", color: "shu" },
             { id: "02", cat: "Exhibition", name: "Coming Soon", desc: "Creative Exhibition with 40+ Artists", img: "./images/small_exhivition.png", color: "ha" },
             { id: "03", cat: "Workshop", name: "Coming Soon", desc: "Interactive Cultural Workshops", img: "./images/small_workshop.png", color: "ri" },
-            { id: "04", cat: "Food & Drink", name: "Coming Soon", desc: "Authentic Japanese Food Experience", img: "./images/small_japanesefood&drink.png", color: "ha" }
+            { id: "04", cat: "Food & Drink", name: "Coming Soon", desc: "Authentic Japanese Food Experience", img: "./images/small_japanesefood&drink.png", color: "shu" }
         ]
     },
     schedule: {
@@ -45,6 +44,5 @@ const translationsEn = {
     access: {
         venue: "JDZB Berlin",
         address: "Saargemünder Str. 2, 14195 Berlin, Germany",
-        note: "Admission Free (Donation-based / Registration Required)"
     }
 };
