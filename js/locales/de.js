@@ -1,13 +1,12 @@
 const translationsDe = {
     nav: { hero: "Home", vision: "Vision", concept: "Konzept", artists: "Künstler", schedule: "Ablauf", access: "Anfahrt" },
     hero: {
-        tagline: "Grenzen vergessen, wo Kreation konvergiert.",
-        date: "10:00–19:00 | 24.05.2025",
-        entry: "Freier Eintritt (Spendenbasis, Anmeldung erforderlich)",
+        date: "10:00–20:00 | 23.05.2026 / 10:00-17:00 | 24.05.2026",
+        entry: "Entry by reservation through Rausgegangen",
         venue: "JDZB Japanisch-Deutsches Zentrum,<br>Saargemünder Str. 2, 14195 Berlin",
         btn: "Jetzt registrieren",
         url: "https://rausgegangen.de/en/events/shu-ha-ri-2026-2/",
-        img: "./images/main-a.jpg"
+        img: "images/main-b.jpg"
     },
     vision: {
         main: "Durch deine Interpretation wird Kultur lebendig.<br>Kultiviere die Zeit mit deinen Händen.",
@@ -40,6 +39,10 @@ const translationsDe = {
         events: [
             { time: "none", name: "un" },
         ]
+    },
+    social: {
+        instagram: "https://www.instagram.com/shuhari_berlin/",
+        facebook: "https://www.facebook.com/share/1bGK4AHXQm/?mibextid=wwXIfr"
     },
     access: { venue: "JDZB Berlin", address: "Saargemünder Str. 2, 14195 Berlin", note: "Eintritt frei (Anmeldung erforderlich)" }
 };

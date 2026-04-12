@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHUHARI Berlin Festival 2026</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="images/124662.jpg" type="image/jpeg">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,6 +23,9 @@
             <a href="#schedule" class="nav-label" data-key="nav.schedule">Schedule</a>
             <a href="#access" class="nav-label" data-key="nav.access">Access</a>
         </nav>
+
+        <div id="header-social" class="flex gap-4 text-lg"></div>
+
         <div class="flex items-center gap-4 text-[10px] font-bold">
             <button onclick="setLang('en')">EN</button> / 
             <button onclick="setLang('de')">DE</button> / 
@@ -45,13 +49,13 @@
             <a href="#artists" onclick="toggleMenu()">Artists</a>
             <a href="#schedule" onclick="toggleMenu()">Schedule</a>
             <a href="#access" onclick="toggleMenu()">Access</a>
+        <div id="header-social" class="flex gap-4 text-lg"></div>
     </div>
 
     <main>
         <section id="hero" class="min-h-screen flex flex-col justify-center px-6 relative text-white text-center">
             <div class="max-w-[1400px] mx-auto flex flex-col items-center">
                 <h1 class="text-6xl md:text-[10rem] font-black tracking-tighter italic leading-none mb-4">SHUHARI</h1>
-                <p id="h-tagline" class="text-lg md:text-2xl font-light tracking-widest mb-12 opacity-90"></p>
                 
                 <div class="space-y-2 mb-12 text-sm md:text-base font-bold tracking-widest">
                     <p id="h-date"></p>
@@ -69,7 +73,7 @@
             <div class="max-w-[1400px] mx-auto p-8 md:p-24 text-center">
                 <p class="text-[#3F51B5] font-bold tracking-[0.4em] mb-6 text-xs uppercase">Vision</p>
                 <h2 id="v-main" class="text-3xl md:text-6xl font-black leading-tight mb-10 tracking-tighter"></h2>
-                <p id="v-sub" class="text-lg md:text-xl font-light text-gray-500 italic max-w-3xl mx-auto"></p>
+                <p id="v-sub" class="text-lg md:text-xl font-black italic max-w-3xl mx-auto"></p>
             </div>
         </section>
 
@@ -99,7 +103,8 @@
     </main>
 
     <footer class="p-12 text-center bg-white border-t border-black relative z-10">
-        <p class="text-[10px] font-bold tracking-widest opacity-30 uppercase">© SHUHARI Berlin 2025</p>
+        <div id="footer-social" class="flex gap-6 mb-8 text-2xl"></div>
+        <p class="text-[10px] font-bold tracking-widest opacity-30 uppercase">© SHUHARI Berlin 2026</p>
     </footer>
 
     <script src="./js/locales/en.js"></script>

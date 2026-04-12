@@ -1,13 +1,12 @@
 const translationsEn = {
     nav: { hero: "Home", vision: "Vision", concept: "Konzept", artists: "Artists", schedule: "Schedule", access: "Access" },
     hero: {
-        tagline: "Forget Boundaries, Where Creation Converges.",
-        date: "10:00–19:00 | 24.05.2025",
-        entry: "Free Entry (Donation-based, Registration Required)",
-        venue: "JDZB Japanisch-Deutsches Zentrum,<br>Saargemünder Str. 2, 14195 Berlin",
+        date: "10:00–20:00 / 23.05.2026 | 10:00-17:00 / 24.05.2026",
+        entry: "Entry by reservation through Rausgegangen",
+        venue: "Japanese-German Center Berlin, Saargemünder Str. 2, 14195 Berlin, Germany",
         btn: "Register Now",
         url: "https://rausgegangen.de/en/events/shu-ha-ri-2026-2/",
-        img: "./images/main-a.jpg"
+        img: "images/main-b.jpg"
     },
     vision: {
         main: "Your interpretation moves culture.<br>With your own hands, cultivate the times.",
@@ -40,6 +39,10 @@ const translationsEn = {
         events: [
             { time: "none", name: "un" },
         ]
+    },
+    social: {
+        instagram: "https://www.instagram.com/shuhari_berlin/",
+        facebook: "https://www.facebook.com/share/1bGK4AHXQm/?mibextid=wwXIfr"
     },
     access: {
         venue: "JDZB Berlin",

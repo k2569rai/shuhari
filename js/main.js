@@ -5,7 +5,6 @@ function setLang(lang) {
     else t = translationsEn; // デフォルトは英語
     
     // 1. HERO セクションの更新
-    document.getElementById('h-tagline').innerText = t.hero.tagline;
     document.getElementById('h-date').innerText = t.hero.date;
     document.getElementById('h-entry').innerText = t.hero.entry;
     document.getElementById('h-venue').innerHTML = t.hero.venue;
@@ -28,9 +27,22 @@ function setLang(lang) {
     document.getElementById('c-title').innerText = t.concept.title;
     document.getElementById('c-body').innerHTML = t.concept.body;
 
-    // 4. 動的リストの描画（ここがエラーの原因でした）
+    // 4. 動的リストの描画
     renderArtists(t.artists.list);
     renderSchedule(t.schedule.events);
+
+    // SNSリンクの描画（ヘッダーとフッター両方）
+    const socialHtml = `
+        <a href="${t.social.instagram}" target="_blank" class="hover:opacity-50 transition-opacity">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="${t.social.facebook}" target="_blank" class="hover:opacity-50 transition-opacity">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+    `;
+
+    document.getElementById('header-social').innerHTML = socialHtml;
+    document.getElementById('footer-social').innerHTML = socialHtml;
     
     document.documentElement.lang = lang;
     localStorage.setItem('shuhari-lang', lang);
@@ -62,7 +74,7 @@ function renderArtists(list) {
     }).join('');
 }
 
-// スケジュール一覧を描画する関数 (これが足りませんでした)
+// スケジュール一覧を描画する関数
 function renderSchedule(events) {
     const list = document.getElementById('schedule-list');
     if (!list) return;
