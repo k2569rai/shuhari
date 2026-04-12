@@ -3,7 +3,7 @@ const translationsJa = {
     vision: {
         main: "あなたの解釈が文化を動かす。<br>その手で時代を耕そう。",
         sub: "文化の過程をひらき、解釈が生まれ続ける循環をつくる。",
-        img: "./images/shuhari.png"
+        img: "./images/SHUHARI.png"
     },
     concept: {
         title: "あなたの中で完成する日本文化。 「守破離」を辿ろう。",
