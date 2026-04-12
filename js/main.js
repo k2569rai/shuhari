@@ -1,44 +1,63 @@
 function setLang(lang) {
     const t = lang === 'ja' ? translationsJa : translationsEn;
     
-    // Vision
+    // 1. HERO セクションの更新
+    document.getElementById('h-tagline').innerText = t.hero.tagline;
+    document.getElementById('h-date').innerText = t.hero.date;
+    document.getElementById('h-entry').innerText = t.hero.entry;
+    document.getElementById('h-venue').innerHTML = t.hero.venue;
+    
+    // リンクの更新
+    const registerBtn = document.getElementById('h-btn');
+    if (registerBtn) {
+        registerBtn.innerText = t.hero.btn;
+        registerBtn.href = t.hero.url; 
+        console.log("Link updated to:", t.hero.url);
+    }
+    
+    document.getElementById('h-img').src = t.hero.img;
+
+    // 2. VISION セクションの更新
     document.getElementById('v-main').innerHTML = t.vision.main;
     document.getElementById('v-sub').innerText = t.vision.sub;
-    document.getElementById('v-img').src = t.vision.img;
 
-    // Concept
+    // 3. CONCEPT セクションの更新
     document.getElementById('c-title').innerText = t.concept.title;
     document.getElementById('c-body').innerHTML = t.concept.body;
 
-    // Artists
-    const artistsContainer = document.getElementById('artists-grid');
-    artistsContainer.innerHTML = t.artists.list.map(a => `
-        <div class="artist-card card-${a.color} p-10 flex flex-col justify-end grid-line-r grid-line-b">
-            <img src="${a.img}" class="artist-img-bg">
+    // 4. 動的リストの描画（ここがエラーの原因でした）
+    renderArtists(t.artists.list);
+    renderSchedule(t.schedule.events);
+    
+    document.documentElement.lang = lang;
+}
+
+// アーティスト一覧を描画する関数
+function renderArtists(list) {
+    const grid = document.getElementById('artists-grid');
+    if (!grid) return;
+    grid.innerHTML = list.map(a => `
+        <div class="artist-card p-10 flex flex-col justify-end grid-line-r grid-line-b min-h-[400px] transition-all duration-500 hover:bg-[#D32F2F] hover:text-white group relative cursor-pointer bg-white">
+            <img src="${a.img}" class="absolute inset-0 p-16 object-contain opacity-10 group-hover:opacity-50 transition-all duration-500 pointer-events-none">
             <div class="relative z-10">
                 <span class="text-[10px] font-bold uppercase tracking-widest">${a.id} / ${a.cat}</span>
-                <h3 class="text-2xl font-black">${a.name}</h3>
-                <p class="text-xs mt-2 opacity-60">${a.desc}</p>
+                <h3 class="text-3xl font-black leading-none">${a.name}</h3>
+                <p class="text-xs mt-3 opacity-60">${a.desc}</p>
             </div>
         </div>
     `).join('');
+}
 
-    // Schedule
-    document.getElementById('schedule-list').innerHTML = t.schedule.events.map(e => `
-        <div class="flex justify-between border-b border-black/10 py-4">
+// スケジュール一覧を描画する関数 (これが足りませんでした)
+function renderSchedule(events) {
+    const list = document.getElementById('schedule-list');
+    if (!list) return;
+    list.innerHTML = events.map(e => `
+        <div class="flex justify-between border-b border-black/10 py-5">
             <span class="font-mono text-sm">${e.time}</span>
             <span class="font-bold">${e.name}</span>
         </div>
     `).join('');
-
-    // Access
-    document.getElementById('access-info').innerHTML = `
-        <p class="text-3xl font-black">${t.access.venue}</p>
-        <p class="text-sm opacity-50">${t.access.address}</p>
-        <p class="text-xs mt-4 font-bold text-ha">${t.access.note}</p>
-    `;
-
-    document.documentElement.lang = lang;
 }
 
 function toggleMenu() {
@@ -46,4 +65,6 @@ function toggleMenu() {
     document.getElementById('menu-overlay').classList.toggle('open');
 }
 
-document.addEventListener('DOMContentLoaded', () => setLang('ja'));
+document.addEventListener('DOMContentLoaded', () => {
+    setLang('en'); // 初期言語を英語に
+});
