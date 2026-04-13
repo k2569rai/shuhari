@@ -10,22 +10,11 @@ const translationsDe = {
     },
     vision: {
         main: "Durch deine Interpretation wird Kultur lebendig.<br>Kultiviere die Zeit mit deinen Händen.",
-        sub: `SHU HA RI bedeutet nicht, Kultur als Wissen oder als etwas Fertiges zu bewahren.
-              Es ist ein Prozess des Aufnehmens, Hinterfragens und Neuinterpretierens—
-              und der Überführung in die eigene schöpferische Praxis.
-              Mit dieser Veranstaltung möchten wir einen Raum schaffen,
-              in dem Kultur nicht nur etwas ist, das man betrachtet oder lernt,
-              sondern etwas, das weitergegeben wird—
-              an neue Ausdrucksformen und neue Dialoge.`
+        sub: "SHU HA RI bedeutet nicht, Kultur als Wissen oder als etwas Fertiges zu bewahren.<br>Es ist ein Prozess des Aufnehmens, Hinterfragens und Neuinterpretierens—<br>und der Überführung in die eigene schöpferische Praxis.<br>Mit dieser Veranstaltung möchten wir einen Raum schaffen,<br>in dem Kultur nicht nur etwas ist, das man betrachtet oder lernt,<br>sondern etwas, das weitergegeben wird—<br>an neue Ausdrucksformen und neue Dialoge."
     },
     concept: {
-        title: "Japanische Kultur ist nichts, was in einer Vitrine vollendet wird.",
-        body: `
-            <p>Im Alltag der Menschen hat sie weitergelebt und dabei mit der Zeit ihre Gestalt verändert. Japanische Kultur, die sich in dir vollendet. Folge dem Weg von SHU HA RI.</p>
-            <p>Oft wird eine bestimmte Form japanischer Kultur als fertiges Bild präsentiert. Doch die Gedanken, die in ihren Details liegen, und die Prozesse, in denen sie über lange Zeit gewachsen sind, werden nur selten sichtbar gemacht.</p>
-            <p>Als wir uns innerhalb dieser Kultur befanden, waren ihre Gestalten schwer zu erfassen. Erst mit Abstand traten ihre Feinheit und ihre Zwischenräume hervor.</p>
-            <p>Diese Veranstaltung lädt dazu ein, den Prozess von SHU HA RI nachzuvollziehen: die Form zu erlernen, die Hülle zu durchbrechen und sie in einen eigenen Ausdruck zu verwandeln. Nicht nur das fertige Werk steht im Mittelpunkt, sondern auch der Prozess der Entstehung. So kann in jedem Besucher eine neue Interpretation entstehen.</p>
-        `
+        title: "Japanische Kultur, die sich in dir vollendet.<br>Folge dem Weg von SHU HA RI.",
+        body: "Japanische Kultur ist nichts, was in einer Vitrine vollendet wird.s<br>Im Alltag der Menschen hat sie weitergelebt<br>und dabei mit der Zeit ihre Gestalt verändert.<br>Oft wird eine bestimmte Form japanischer Kultur<br>als fertiges Bild präsentiert.<br>Doch die Gedanken, die in ihren Details liegen,<br>und die Prozesse, in denen sie über lange Zeit gewachsen sind,<br>werden nur selten sichtbar gemacht.<br>Als wir uns innerhalb dieser Kultur befanden,<br>waren ihre Gestalten schwer zu erfassen.<br>Erst mit Abstand traten ihre Feinheit und ihre Zwischenräume hervor.<br>Diese Veranstaltung lädt dazu ein,<br>den Prozess von SHU HA RI nachzuvollziehen:<br>die Form zu erlernen, die Hülle zu durchbrechen<br>und sie in einen eigenen Ausdruck zu verwandeln.<br>Nicht nur das fertige Werk steht im Mittelpunkt,<br>sondern auch der Prozess der Entstehung.<br>So kann in jedem Besucher eine neue Interpretation entstehen."
     },
     artists: {
         list: [

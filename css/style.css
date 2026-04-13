@@ -171,30 +171,56 @@ section:not(#hero) {
 #menu-overlay.open { opacity: 1; pointer-events: auto; }
 
 /* Visionのサブテキスト（右側）の行間と改行設定 */
-#v-sub {
-    white-space: pre-wrap; /* JavaScriptの改行をそのまま画面に反映 */
-    line-height: 2.2;      /* 行間を広げて読みやすく */
-    color: #000000;        /* グレーではなく純粋な黒 */
-}
-
-/* Conceptの本文も同様に黒に統一 */
-#c-body p {
-    color: #000000;
-    font-weight: 500;
-}
-
-.responsive-title {
-    /* 縦積みの場合は、画面中央でより大きく、堂々と見せる */
-    font-size: clamp(2.5rem, 6vw, 5.5rem);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 900px;
-}
-
-/* 本文の可読性を上げるための余白 */
 #v-sub, #c-body {
-    line-height: 2.2; /* 日本語・欧文どちらも読みやすい行間 */
-    letter-spacing: 0.02em;
+    /* バッククォートの改行を維持 */
+    white-space: pre-wrap; 
+    
+    /* 日本語が変な場所で切れるのを防ぎ、
+       できるだけユーザーが意図した改行位置まで粘る */
+    word-break: keep-all; 
+    overflow-wrap: anywhere; 
+
+    /* 文字サイズが大きすぎると強制改行が起きるため、少しだけ調整 */
+    font-size: clamp(1rem, 0.95rem + 0.5vw, 1.1rem);
+    line-height: 2;
+    text-align: left; /* pre-wrapの場合、中央寄せより左寄せの方が制御しやすいです */
+}
+
+/* --- タイトルと本文の改行制御 --- */
+.responsive-title, #v-sub, #c-body {
+    white-space: normal; /* 勝手な改行・空白を無視 */
+    word-break: keep-all; /* 日本語の単語の途中での改行を防止 */
+    overflow-wrap: break-word; /* 長い単語は枠内で折る */
+}
+
+/* --- Vision (#v-main) のサイズ調整 --- */
+#v-main {
+    /* 10vwは大きすぎるため、固定値+可変値で安定させます */
+    font-size: clamp(1.8rem, 1rem + 6vw, 2.5rem) !important;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+/* --- Concept (#c-title) のサイズ調整 --- */
+#c-title {
+    font-size: clamp(1.4rem, 1rem + 4vw, 2.5rem) !important;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+/* --- 本文の可読性向上 --- */
+#v-sub, #c-body {
+    max-width: 800px; /* 1行が長くなりすぎないよう制限 */
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: center; /* センター寄せ */
+}
+
+/* 特定の単語を絶対に泣き別れさせないためのクラス */
+.keep-together {
+    display: inline-block;
+    white-space: nowrap;
 }
 
 /* 白背景セクションの一体感を出す */

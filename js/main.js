@@ -5,14 +5,14 @@ function setLang(lang) {
     else t = translationsEn; // デフォルトは英語
     
     // 1. HERO セクションの更新
-    document.getElementById('h-date').innerText = t.hero.date;
-    document.getElementById('h-entry').innerText = t.hero.entry;
+    document.getElementById('h-date').innerHTML = t.hero.date;
+    document.getElementById('h-entry').innerHTML = t.hero.entry;
     document.getElementById('h-venue').innerHTML = t.hero.venue;
     
     // リンクの更新
     const registerBtn = document.getElementById('h-btn');
     if (registerBtn) {
-        registerBtn.innerText = t.hero.btn;
+        registerBtn.innerHTML = t.hero.btn;
         registerBtn.href = t.hero.url; 
         console.log("Link updated to:", t.hero.url);
     }
@@ -24,7 +24,7 @@ function setLang(lang) {
     document.getElementById('c-title').innerHTML = t.concept.title; // innerHTMLに変更
 
     // 本文
-    document.getElementById('v-sub').innerText = t.vision.sub;
+    document.getElementById('v-sub').innerHTML = t.vision.sub; 
     document.getElementById('c-body').innerHTML = t.concept.body;
 
     // 4. 動的リストの描画

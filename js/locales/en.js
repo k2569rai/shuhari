@@ -10,22 +10,11 @@ const translationsEn = {
     },
     vision: {
         main: "Your interpretation moves culture.<br>With your own hands, cultivate the times.",
-        sub: `SHU HA RI is not about preserving culture as knowledge or as something already completed.
-              It is a process of receiving, unsettling, and reinterpreting culture—
-              and transforming it into one’s own creation.
-              Through this event, we hope to create a space
-              where culture does not end as something merely to see or to learn,
-              but is handed forward—
-              toward the next expression, the next dialogue.`
+        sub: "SHU HA RI is not about preserving culture as knowledge or as something already completed.<br>It is a process of receiving, unsettling, and reinterpreting culture—<br>and transforming it into one’s own creation.<br>Through this event, we hope to create a space<br>where culture does not end as something merely to see or to learn,<br>but is handed forward—<br>toward the next expression, the next dialogue."
     },
     concept: {
-        title: "Japanese culture is not something that becomes complete inside a showcase.",
-        body: `
-            <p>Within people’s everyday lives, it has continued to live, changing its form over time. Japanese culture completed within you. Follow the path of SHU HA RI.</p>
-            <p>Too often, specific forms of Japanese culture are presented as finished images. Yet the thinking embedded in their details and the long processes through which they have been accumulated are rarely shared.</p>
-            <p>When we were inside it, the shape of Japan was difficult to see. From a distance, its subtlety and its quiet spaces emerged.</p>
-            <p>This event offers a chance to experience the process of SHU HA RI: learning the form, breaking the shell, and transforming it into one’s own expression. Rather than focusing only on the finished work, we invite visitors to encounter the process itself— so that a new interpretation may arise within each person.</p>
-        `
+        title: `Japanese culture completed within you.<br>Follow the path of SHU HA RI.`,
+        body: "Japanese culture is not something that becomes complete inside a showcase.<br>Within people’s everyday lives,<br>it has continued to live, changing its form over time.<br>Too often, specific forms of Japanese culture are presented as finished images.<br>Yet the thinking embedded in their details<br>and the long processes through which they have been accumulated<br>are rarely shared.<br>When we were inside it, the shape of Japan was difficult to see.<br>From a distance, its subtlety and its quiet spaces emerged.<br>This event offers a chance to experience the process of SHU HA RI:<br>learning the form, breaking the shell, and transforming it into one’s own expression.<br>Rather than focusing only on the finished work,<br>we invite visitors to encounter the process itself—<br>so that a new interpretation may arise within each person."
     },
     artists: {
         list: [
