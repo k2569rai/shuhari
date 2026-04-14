@@ -50,9 +50,9 @@ body {
 }
 
 /* Heroの文字を背景画像に対してくっきりさせる */
-#hero h1, #hero p, #hero div {
+/*#hero h1, #hero p, #hero div {
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
-}
+}*/
 
 /* Vision以降のセクション：背景色を白で固定して断層を防ぐ */
 section:not(#hero) {
@@ -227,4 +227,44 @@ section:not(#hero) {
 section:not(#hero) {
     background-color: #ffffff;
     border-bottom: 1px solid #000000;
+}
+
+/* style.css */
+
+#v-main {
+    /* 1. 絶対に改行させない */
+    white-space: nowrap !important;
+
+    /* 2. 画面幅いっぱいに文字を広げる魔法の数値 */
+    /* 25文字程度の場合、3.8vw〜4vwあたりが「1行に収まる」限界値です */
+    /* clamp(最小サイズ, 推奨サイズ, 最大サイズ) */
+    font-size: clamp(12px, 2.8vw, 60px) !important;
+
+    /* 3. はみ出し防止（万が一のための保険） */
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    
+    text-align: center;
+    line-height: 1.5;
+}
+
+#c-title {
+    /* 1. 絶対に改行させない */
+    white-space: nowrap !important;
+
+    /* 2. 画面幅に合わせて文字サイズを自動縮小 */
+    /* Visionより文字数が多いため、少し小さめの 3.2vw あたりから調整します */
+    font-size: clamp(12px, 2.9vw, 48px) !important;
+
+    /* 3. レイアウト調整 */
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1.2;
+    overflow: hidden; /* はみ出し防止 */
+    
+    /* 余白の調整（必要に応じて） */
+    margin-left: auto;
+    margin-right: auto;
 }

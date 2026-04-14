@@ -2,11 +2,11 @@ const translationsDe = {
     nav: { hero: "Home", vision: "Vision", concept: "Konzept", artists: "Künstler", schedule: "Ablauf", access: "Anfahrt" },
     hero: {
         date: "10:00–20:00 | 23.05.2026 / 10:00-17:00 | 24.05.2026",
-        entry: "Entry by reservation through Rausgegangen",
+        entry: "Sie müssen vor dem Einlass eine Eintrittskarte kaufen",
         venue: "JDZB Japanisch-Deutsches Zentrum,<br>Saargemünder Str. 2, 14195 Berlin",
         btn: "Jetzt registrieren",
         url: "https://rausgegangen.de/en/events/shu-ha-ri-2026-2/",
-        img: "images/main-b.jpg"
+        img: "images/main-b.jpeg"
     },
     vision: {
         main: "Durch deine Interpretation wird Kultur lebendig.<br>Kultiviere die Zeit mit deinen Händen.",
@@ -34,12 +34,8 @@ const translationsDe = {
         facebook: "https://www.facebook.com/share/1bGK4AHXQm/?mibextid=wwXIfr"
     },
     access: { venue: "JDZB Berlin", address: "Saargemünder Str. 2, 14195 Berlin", note: "Eintritt frei (Anmeldung erforderlich)" },
-    sponsors: [
+    support: [
         { name: "Tobitate! Study Abroad Japan", img: "images/logo_tobitate.png", url: "https://..." },
         { name: "Japanisch-Deutsches Zentrum Berlin", img: "images/logo_jdzb.png", url: "https://..." }
-    ],
-    support: [
-        { name: "Organization A", img: "./images/support_a.png", url: "https://..." },
-        { name: "Organization B", img: "./images/support_b.png", url: "https://..." }
     ]
 };

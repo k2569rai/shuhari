@@ -2,11 +2,11 @@ const translationsEn = {
     nav: { hero: "Home", vision: "Vision", concept: "Konzept", artists: "Artists", schedule: "Schedule", access: "Access" },
     hero: {
         date: "10:00–20:00 / 23.05.2026 | 10:00-17:00 / 24.05.2026",
-        entry: "Entry by reservation",
+        entry: "You need to buy a ticket before your entry",
         venue: "Japanese-German Center Berlin, Saargemünder Str. 2, 14195 Berlin, Germany",
         btn: "Register Now",
         url: "https://rausgegangen.de/en/events/shu-ha-ri-2026-2/",
-        img: "images/main-b.jpg"
+        img: "images/main-b.jpeg"
     },
     vision: {
         main: "Your interpretation moves culture.<br>With your own hands, cultivate the times.",
@@ -37,12 +37,8 @@ const translationsEn = {
         venue: "JDZB Berlin",
         address: "Saargemünder Str. 2, 14195 Berlin, Germany",
     },
-    sponsors: [
+    support: [
         { name: "Tobitate! Study Abroad Japan", img: "images/logo_tobitate.png", url: "https://..." },
         { name: "Japanisch-Deutsches Zentrum Berlin", img: "images/logo_jdzb.png", url: "https://..." }
-    ],
-    support: [
-        { name: "Organization A", img: "./images/support_a.png", url: "https://..." },
-        { name: "Organization B", img: "./images/support_b.png", url: "https://..." }
     ]
 };
